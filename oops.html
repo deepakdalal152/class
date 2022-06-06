@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+
+
+    class User{
+
+        #password;
+        constructor(name)
+        {
+            if(this.constructor === User)
+            {
+                throw Error("You are no allowed to use this class as a direct connection")
+            }
+            this.name =  name;
+
+            display()
+            {
+                throw Error(" We can not display the data to user")
+            }
+        }
+        #validateUsername(username)
+        {
+            // validating the username------------------
+            if(username)
+            {
+                return true;
+            }
+        }
+        #validatePassword(password)
+        {
+            // validating the password-------------------------
+            if(password)
+            {
+                return true;
+            }
+        }
+        // signup----------------
+        signup(signupUsername, signupPassword)
+        {
+            // if validate then only user will able to save their nameon the data base----------
+            let validation =  false;
+            validation =  this.#validateUsername(signupUsername) && this.#validatePassword(signupPassword)
+
+            console.log(`"validate: " ${validation}`)
+
+            // validating------------------
+            if (validation)
+            {
+                this.username =  signupUsername;
+                this.#password = signupPassword;
+
+                console.log("signup success")
+            }
+            else{
+                console.log("signup failed")
+            }
+        }
+        // login-----------------
+        login(loginUsername, loginPassword)
+        {
+            //  if input match with the database then only he or she will able to login on the page------------------
+            if(loginUsername === this.username && loginPassword === this.#password)
+            {
+                console.log("Login Success")
+            }
+            else{
+                console.log("Login failed")
+            }
+        }
+        //  in case if a use need to change the password-------------------
+        set changePassword(newPassword)
+        {
+            this.#password =  newPassword
+        }
+        //  in case if we want to use user bane for data base-------------------
+        get currentUser()
+        {
+            return this.username;
+        }
+    }
+
+
+
+
+
+let Admin =  new User("Deepak")
+
+Admin.signup("deepakdalal152","@lone@123")
+
+Admin.login("deepakdalal152","@lone@123")
+
+Admin.changePassword = "@mit@123"
+
+console.log(Admin.currentUser)
+
+
+console.log(Admin)
+</script>

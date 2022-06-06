@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+
+<script>
+    
+
+    // class Mobile{
+    //     constructor(mod,com,call){
+    //         this.modelNo = mod
+    //         this.company = com
+    //         this.calling = call
+    //     }
+    //     callStatus = () =>{
+    //         if(!this.calling)
+    //         {
+    //             return "not ";
+    //         }
+    //         else{
+    //             return "";
+    //         }
+    //     }
+    //    details = () =>
+    //     {
+
+    //         return(`${this.company} has launched ${this.modelNo}, The calling is ${this.callStatus()}availiable on this mobile`)
+    //     }
+    // }
+
+    // let mi10 = new Mobile(1200, 'Realme', false)
+
+    // class newVersion extends Mobile{
+    //     constructor(mod, com, call, fastCharging)
+    //     {
+    //         super(mod,com,call)
+    //         this.fastCharging = fastCharging
+    //     }
+    //     fastChargingStatus = () =>{
+    //         if(!this.fastCharging)
+    //         {
+    //             return "not "
+    //         }
+    //         else{
+    //             return ""
+    //         }
+    //     }
+    //     updateDetails = () =>{
+    //         console.log(`${this.details()} and fast charging is ${this.fastChargingStatus()}availiable on this mobile`)
+    //     }
+    // }
+
+    // let mi11 = new newVersion(1200,'Realme', true, false)
+    // console.log(mi11)
+    // mi11.updateDetails()
+
+
+
+
+    // class stack{
+    //     constructor()
+    //     {
+    //         this.length = 0;
+    //         this.arr = [];
+    //     }
+    //     push(value)
+    //     {
+    //         this.arr[this.length++] = value
+    //     }
+    //     pop(){
+    //         this.arr.pop()
+    //         this.length--
+    //     }
+    //     top()
+    //     {
+    //         return(this.arr[this.length - 1])
+    //     }
+    //     print()
+    //     {
+    //         for(let x of this.arr)
+    //         {
+    //             console.log(x)
+    //         }
+    //     }
+    //     reversePrint()
+    //     {
+    //         for(let x = this.length -1; x >= 0; x--)
+    //         {
+    //             console.log(this.arr[x])
+    //         }
+    //     }
+    //     size()
+    //     {
+    //         return this.length;
+    //     }
+    // }
+
+    // let arrs = new stack()
+    // let count = 5 
+
+    
+    // arrs.push(count++)
+    // arrs.push(count++)
+    // arrs.push(count++)
+    // arrs.push(count++)
+    // arrs.push(count++)
+    // arrs.push(count++)
+    // arrs.push(count++)
+
+    // arrs.pop()
+    // arrs.pop()
+
+    // console.log(arrs.top())
+    // arrs.reversePrint()
+
+
+    // console.log(arrs)
+    // console.log(arrs.size())
+
+
+
+        // class car{
+        //     constructor(horsePower, name)
+        //     {
+        //         this.horsePower = horsePower;
+        //         this.fuel = 100;
+        //         this.name = name;
+        //     }
+        //     consumeFuel(amount)
+        //     {
+        //         this.fuel -= amount
+        //     }
+        // }
+
+        // class sedan extends car{
+
+        //     constructor(horsePower, name)
+        //     {
+        //         super(horsePower, name);
+        //         // this.numOfSeat = numOfSeat
+        //     }
+
+        //     printName()
+        //     {
+        //         console.log(this.name)
+        //     }
+        //     updateHorePower(input)
+        //     {
+        //         super.horsePower = input
+        //     }
+        // }
+
+        // let mySedan =  new sedan(100, 'honda')
+        // let newSedan = new sedan(120, "test")
+
+        // console.log(mySedan.horsePower)
+        // console.log(newSedan.horsePower)
+
+
+
+class person{
+    constructor(name, energy)
+    {
+        this.name = name;
+        this.energy = energy;
+    }
+    eat(amount)
+    {
+        energy += amount
+    }
+    sleep(amount)
+    {
+        energy += amount
+    }
+}
+
+class Coder extends person{
+    constructor(name, energy)
+    {
+        super(name,energy)
+    }
+    code(amount)
+    {
+        this.energy -= amount
+    }
+}
+
+let amit = new Coder("amit", 45)
+let sumit = new Coder("sumit", 45)
+amit.code(34)
+sumit.code(32)
+
+console.log(amit)
+console.log(sumit)
+
+
+
+</script>
